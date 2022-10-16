@@ -9,8 +9,5 @@ write_to = "src/python_tools/_version.py"
 line-length = 79
 
 [tool.isort]
-sections = ["FUTURE", "STDLIB", "THIRDPARTY", "APPLICATION", "FIRSTPARTY", "LOCALFOLDER"]
-known_third_party = ["PySide2", "shiboken2", "yaml", "six", "webcolors"]
-known_application=["python"]
 profile = "black"
 line_length = 79
