@@ -1,4 +1,6 @@
 """Forget a complete module at once."""
+from __future__ import annotations
+
 import sys
 
 

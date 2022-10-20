@@ -16,7 +16,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     for filename in args.filenames:
-        with open(filename, "r", encoding="utf-8") as stream:
+        with open(filename, encoding="utf-8") as stream:
             contents = json.load(stream)
 
         with open(filename, "w", encoding="utf-8") as stream:
