@@ -1,22 +1,22 @@
-"""Forget a complete module at once."""
+"""Completely forget a single module or an entire package."""
 from __future__ import annotations
 
 import sys
 
 
-def forget(name, full=True):
+def forget(name: str, full: bool = True) -> set[str]:
     """Remove a module from `sys.modules`.
 
     Arguments:
-        name: The name of the module that should be removed.
+        name: The name of the module/package that should be removed.
         full: Remove every sub-modules of the given name.
 
     Returns:
         The list of the forgotten modules.
     """
-    forgetten = []
-    for module in reversed(sys.modules.keys()):
+    forgetten = set()
+    for module in reversed(list(sys.modules)):
         if module == name or (full and module.startswith(name + ".")):
-            forgetten.append(module)
+            forgetten.add(module)
             del sys.modules[module]
     return forgetten
