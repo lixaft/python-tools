@@ -6,7 +6,7 @@ from unittest import mock
 from python_tools.forget import forget
 
 
-def test_forget_module() -> None:
+def test_forget_module():
     modules = {"a": None, "b": None, "b.a": None, "b.b": None}
     with mock.patch.object(sys, "modules", modules):
         result = forget("a")
@@ -14,7 +14,7 @@ def test_forget_module() -> None:
         assert result == {"a"}
 
 
-def test_forget_full_package() -> None:
+def test_forget_full_package():
     modules = {"a": None, "b": None, "b.a": None, "b.b": None}
     with mock.patch.object(sys, "modules", modules):
         result = forget("b")
@@ -22,7 +22,7 @@ def test_forget_full_package() -> None:
         assert result == {"b", "b.a", "b.b"}
 
 
-def test_forget_partial_package() -> None:
+def test_forget_partial_package():
     modules = {"a": None, "b": None, "b.a": None, "b.b": None}
     with mock.patch.object(sys, "modules", modules):
         result = forget("b", full=False)
