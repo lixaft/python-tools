@@ -4,10 +4,9 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from typing import Sequence
 
 
-def main(argv: Sequence[str] | None = None) -> int:
+def main(argv=None):
     """Entry point of the command line interface."""
     parser = argparse.ArgumentParser()
     parser.add_argument("filenames", nargs="+")

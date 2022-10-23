@@ -4,7 +4,7 @@ from __future__ import annotations
 import sys
 
 
-def forget(name: str, full: bool = True) -> set[str]:
+def forget(name, full=True):
     """Remove a module from `sys.modules`.
 
     Arguments:
