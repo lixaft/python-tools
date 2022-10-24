@@ -1,0 +1,19 @@
+[run]
+branch = True
+paarallel = True
+
+[paths]
+source = src/python_tools
+    */src/python_tools
+
+[report]
+skip_covered = False
+show_missing = True
+exclude_lines =
+    \#\s*pragma: no cover
+    ^\s*@overload( |$)
+    ^\s*assert False(,|$)
+    ^\s*if TYPE_CHECKING:
+    ^\s*raise NotImplementedError\b
+    ^\s*return NotImplemented\b
+    ^if __name__ == ['"]__main__['"]:$
