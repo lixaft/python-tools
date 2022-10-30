@@ -1,6 +1,4 @@
 """Completely forget a single module or an entire package."""
-from __future__ import annotations
-
 import sys
 
 
