@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 from python_tools.jindent import main
 
