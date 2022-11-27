@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 from unittest import mock
 
-from python_tools.forget import forget
+from python_tools.module import forget
 
 
 def test_forget_module():

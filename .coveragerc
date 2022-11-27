@@ -1,14 +1,11 @@
 [run]
 branch = True
-paarallel = True
-
-[paths]
-source = src/python_tools
-    */src/python_tools
+source = python_tools
 
 [report]
-skip_covered = False
 show_missing = True
+skip_covered = True
+fail_under = 100
 exclude_lines =
     \#\s*pragma: no cover
     ^\s*@overload( |$)
