@@ -1,0 +1,31 @@
+---
+name: ci
+
+on:
+  push
+  pull_request
+
+jobs:
+  main:
+    strategy:
+      fail-fast: true
+      matrix:
+        py: ["3.7", "3.8", "3.9", "3.10", "3.11"]
+        os: ["ubuntu-latest", "macOs-latest", "windows-latest"]
+
+      steps:
+        - uses: actions/checkout@v3
+
+        - name: Setup Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: ${{ matrix.py }}
+
+        - name: Install tox
+          run: |-
+            python -m pip install --upgrade pip
+            python -m pip install --upgrade tox
+
+        - name: Unit Tests
+          run: |-
+            tox -e --py -- -v --color-yes
