@@ -28,4 +28,4 @@ jobs:
 
       - name: Unit Tests
         run: |-
-          tox -e py -- -v --color-yes
+          tox -e py -- -v
