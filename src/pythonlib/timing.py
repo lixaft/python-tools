@@ -8,6 +8,7 @@ from typing import Generator
 
 @contextlib.contextmanager
 def timing() -> Generator[None, None, None]:
+    """Print the time required to execute the content."""
     before = time.monotonic()
     try:
         yield

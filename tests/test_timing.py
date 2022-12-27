@@ -4,7 +4,7 @@ import time
 
 import pytest
 
-from python_tools.timing import timing
+from pythonlib.timing import timing
 
 
 @pytest.mark.parametrize(
