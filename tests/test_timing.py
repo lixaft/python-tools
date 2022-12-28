@@ -11,7 +11,7 @@ from pythonlib.timing import timing
     ("value", "expected"),
     (
         (0.1, "ms"),
-        (0.001, "μs"),
+        (0.0001, "μs"),
     ),
 )
 def test_timing_units(capsys, value, expected):
