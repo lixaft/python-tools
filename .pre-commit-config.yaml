@@ -36,15 +36,15 @@ repos:
       - id: add-trailing-comma
         args: [--py36-plus]
   - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
+    rev: 5.11.4
     hooks:
       - id: isort
   - repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v2.0.0
+    rev: v2.0.1
     hooks:
     -   id: autopep8
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.0
+    rev: v3.3.1
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
